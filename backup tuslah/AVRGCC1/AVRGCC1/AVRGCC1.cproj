@@ -59,15 +59,6 @@
     <Compile Include="AVRGCC1.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="hd44780.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="hd44780.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="hd44780_settings.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="lcd.h">
       <SubType>compile</SubType>
     </Compile>

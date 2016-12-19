@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include <avr/sleep.h>
 
+#define RELAY_PIN 1
 volatile char SHOWA [3];
 volatile int16_t COUNTA = 0;
 volatile int sample=0;
@@ -23,7 +24,8 @@ ISR(ADC_vect);
 
 int main(void)
 {
-	DDRA |= (1<<1); //relay pin
+	DDRA |= (1<<RELAY_PIN); //relay pin
+	PORTA &= ~(1<<RELAY_PIN);
     DDRC = 0xFF;    // lcd pins
     _delay_ms(1000);
    
@@ -41,7 +43,7 @@ int main(void)
     lcd_RS_port &= ~(1<<lcd_RS_bit);
 	PORTF &= ~(_BV(1));
 	
-	ADMUX |= (1<<ADLAR)|(1<<MUX1)|(1<<MUX0);
+	ADMUX |= (1<<MUX1)|(1<<MUX0);
 	ADCSRA = 0X8F;
 	USART0_Init();
 	_delay_ms(1000);
@@ -57,7 +59,7 @@ int main(void)
 	
 	while(1)
 	{
-		sleep_cpu();
+		//sleep_cpu();
 		/*COUNTA = adc_read(ADC_PRESCALER_128, ADC_VREF_AVCC, 3);
 		itoa(COUNTA,SHOWA,10);
 		lcd_write_instruction_4d(lcd_Clear);
@@ -81,13 +83,17 @@ ISR(ADC_vect)
 		COUNTA -= y;
 	}		
 	else 		*/
-		COUNTA = ADCH;
+		COUNTA = (ADC*500)/1024;
 	
 	itoa(COUNTA,SHOWA,10);
 	lcd_write_string_4d("ROOM1: ");
 	lcd_write_string_4d(SHOWA);
 	lcd_write_string_4d("C");
 	USART0_SendByte(SHOWA);  // send value 
+	if(COUNTA>25)
+		PORTA &= ~(1<<RELAY_PIN);
+	if(COUNTA<22)
+		PORTA |=(1<<RELAY_PIN);
 	_delay_ms(2000);
 	ADCSRA |= (1<<ADSC);
 }
