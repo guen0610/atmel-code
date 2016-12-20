@@ -1,5 +1,6 @@
-
-#define F_CPU 1000000UL // 1 MHz clock speed
+#ifndef F_CPU
+#define F_CPU 8000000UL // 8 MHz clock speed
+#endif
 
 
 #include <avr/pgmspace.h>

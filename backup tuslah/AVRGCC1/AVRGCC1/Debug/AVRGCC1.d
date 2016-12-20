@@ -16,8 +16,7 @@ AVRGCC1.d AVRGCC1.o: .././AVRGCC1.c \
  c:\program\ files\ (x86)\atmel\avr\ studio\ 5.1\extensions\atmel\avrgcc\3.3.1.27\avrtoolchain\bin\../lib/gcc/avr/4.5.1/../../../../avr/include/avr/pgmspace.h \
  c:\program\ files\ (x86)\atmel\avr\ studio\ 5.1\extensions\atmel\avrgcc\3.3.1.27\avrtoolchain\bin\../lib/gcc/avr/4.5.1/include/stddef.h \
  c:\program\ files\ (x86)\atmel\avr\ studio\ 5.1\extensions\atmel\avrgcc\3.3.1.27\avrtoolchain\bin\../lib/gcc/avr/4.5.1/../../../../avr/include/avr/interrupt.h \
- c:\program\ files\ (x86)\atmel\avr\ studio\ 5.1\extensions\atmel\avrgcc\3.3.1.27\avrtoolchain\bin\../lib/gcc/avr/4.5.1/../../../../avr/include/stdlib.h \
- c:\program\ files\ (x86)\atmel\avr\ studio\ 5.1\extensions\atmel\avrgcc\3.3.1.27\avrtoolchain\bin\../lib/gcc/avr/4.5.1/../../../../avr/include/avr/sleep.h
+ c:\program\ files\ (x86)\atmel\avr\ studio\ 5.1\extensions\atmel\avrgcc\3.3.1.27\avrtoolchain\bin\../lib/gcc/avr/4.5.1/../../../../avr/include/stdlib.h
 
 c:\program\ files\ (x86)\atmel\avr\ studio\ 5.1\extensions\atmel\avrgcc\3.3.1.27\avrtoolchain\bin\../lib/gcc/avr/4.5.1/../../../../avr/include/avr/io.h:
 
@@ -54,5 +53,3 @@ c:\program\ files\ (x86)\atmel\avr\ studio\ 5.1\extensions\atmel\avrgcc\3.3.1.27
 c:\program\ files\ (x86)\atmel\avr\ studio\ 5.1\extensions\atmel\avrgcc\3.3.1.27\avrtoolchain\bin\../lib/gcc/avr/4.5.1/../../../../avr/include/avr/interrupt.h:
 
 c:\program\ files\ (x86)\atmel\avr\ studio\ 5.1\extensions\atmel\avrgcc\3.3.1.27\avrtoolchain\bin\../lib/gcc/avr/4.5.1/../../../../avr/include/stdlib.h:
-
-c:\program\ files\ (x86)\atmel\avr\ studio\ 5.1\extensions\atmel\avrgcc\3.3.1.27\avrtoolchain\bin\../lib/gcc/avr/4.5.1/../../../../avr/include/avr/sleep.h:
